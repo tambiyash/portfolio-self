@@ -9,6 +9,7 @@ import pypeAnalyticsImg from '../assets/pype-analytics.png';
 import pypeImg from '../assets/pype.png';
 import imageVividImg from '../assets/image-vivid.png';
 import voiceChatImg from '../assets/voice-chat.png';
+import dndImg from '../assets/dnd.png';
 import LazyImage from './LazyImage';
 
 const containerVariants = {
@@ -32,6 +33,14 @@ const projectsData = [
     description: "A solo-built SaaS product for generating marketing ad creatives in minutes. Create a brand profile, upload product images, and use prompts to generate ads.",
     tags: ["React", "Redux", "Node.js", "Postgres", "Drizzle ORM", "CI-CD", "S3", "OpenAI", "GCP", "Ads-Marketing"],
     imageText: "Put-up",
+  },
+  {
+    title: "Dungeons and Dragons",
+    url: "https://volter-production-assets-upload.s3.us-west-1.amazonaws.com/60ac2e4e32444e159ee8f7c762da89d4_a881dfec9a58433788a93523e4c5481d_10b5fbc8/preview/index.html",
+    img: dndImg,
+    description: "DnD game created using Vibe Coding.",
+    tags: ["Vibe Coding", "Game"],
+    imageText: "Dungeons and Dragons",
   },
   {
     title: "Toonify AI",
