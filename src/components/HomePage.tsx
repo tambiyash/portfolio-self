@@ -48,7 +48,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate, onEnableSound }) => {
           fontFamily: 'Roboto Mono, monospace'
         }}
       >
-        Frontend Developer & Product Leader
+        Fullstack Developer | Product Leader
       </motion.p>
       <motion.h1
         initial={{ scale: 0.8, opacity: 0 }}

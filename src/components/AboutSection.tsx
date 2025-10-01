@@ -83,7 +83,7 @@ const AboutSection: React.FC = () => {
             <motion.div variants={itemVariants} className="profile-grid">
                 <div style={{ flex: 1 }}>
                     <p style={{marginTop: 0, fontSize: '1.2rem', color: '#fff'}}>
-                        Highly accomplished and innovative Technology Professional with 10 years of extensive experience in software development and product leadership, specializing in frontend architecture, UI/UX engineering, and full-stack development.
+                        Highly accomplished and innovative <span style={{color: '#66fcf1'}}>Engineering + Product Leader</span> with 10 years of extensive experience in software development and product leadership, specializing in frontend architecture, UI/UX engineering, and full-stack development.
                     </p>
                     <p>
                         Proven expertise in React, TypeScript, Node.js, and CI/CD, with a strong track record of driving technical innovation, mentoring high-performing teams, and delivering high-impact solutions in SaaS and AI applications. Adept at migrating legacy systems, optimizing user experiences, and leading end-to-end product development from conception to launch and iteration.

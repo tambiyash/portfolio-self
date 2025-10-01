@@ -20,13 +20,13 @@ const contactLinks = [
     {
         icon: <IconLinkedIn className="icon" />,
         title: "LinkedIn",
-        label: "linkedin.com/in/yashtambi",
+        label: "linkedin.com/in/yash-tambi-817667a6/",
         url: "https://www.linkedin.com/in/yash-tambi-817667a6/",
     },
     {
         icon: <IconGitHub className="icon" />,
         title: "GitHub",
-        label: "github.com/yashtambi",
+        label: "github.com/tambiyash",
         url: "https://github.com/tambiyash",
     },
     {
