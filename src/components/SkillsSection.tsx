@@ -25,7 +25,7 @@ const skillsData = {
   backend: {
     title: "Backend Technologies",
     icon: <IconLayers className="icon" size={28} />,
-    skills: ["Node.js", "Express.js", "PostgreSQL", "Drizzle ORM"]
+    skills: ["Node.js", "Express.js", "Fastify", "WebRTC", "MERN-Stack", "PostgreSQL", "Drizzle ORM"]
   },
   devops: {
     title: "DevOps & Tools",

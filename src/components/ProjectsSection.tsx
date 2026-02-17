@@ -9,6 +9,7 @@ import pypeAnalyticsImg from '../assets/pype-analytics.png';
 import pypeImg from '../assets/pype.png';
 import imageVividImg from '../assets/image-vivid.png';
 import voiceChatImg from '../assets/voice-chat.png';
+import cvStudioImg from '../assets/cv-studio.png';
 import dndImg from '../assets/dnd.png';
 import LazyImage from './LazyImage';
 
@@ -27,12 +28,28 @@ const itemVariants = {
 
 const projectsData = [
   {
-    title: "Put-up",
-    url: "https://put-up.digital",
+    title: "Ulviora",
+    url: "https://ulviora.put-up.digital",
     img: putupImg,
     description: "A solo-built SaaS product for generating marketing ad creatives in minutes. Create a brand profile, upload product images, and use prompts to generate ads.",
     tags: ["React", "Redux", "Node.js", "Postgres", "Drizzle ORM", "CI-CD", "S3", "OpenAI", "GCP", "Ads-Marketing"],
-    imageText: "Put-up",
+    imageText: "Ulviora",
+  },
+  {
+    title: "AI Resume Builder",
+    url: "https://cv-builder-studio.vercel.app/",
+    img: cvStudioImg,
+    description: "A real-time CV builder with AI models like OpenAI and Gemini.",
+    tags: ["Next.js", "Vercel", "Tailwind", "Tanstack Query", "Zustand", "OpenAI", "Gemini"],
+    imageText: "CV Builder Studio",
+  },
+  {
+    title: "AI Voice Chat",
+    url: "https://energent-voice-chat.vercel.app",
+    img: voiceChatImg,
+    description: "A proof-of-concept for real-time voice conversations with AI models like OpenAI and Gemini.",
+    tags: ["Next.js", "Vercel", "OpenAI", "Gemini", "gRPC", "WebRTC"],
+    imageText: "Voice Chat",
   },
   {
     title: "Dungeons and Dragons",
@@ -51,6 +68,14 @@ const projectsData = [
     status: "Currently unavailable on the App Store",
   },
   {
+    title: "ImageVivid",
+    url: "https://image-vivid.vercel.app",
+    img: imageVividImg,
+    description: "A web application to generate vivid images from AI prompts, built to experiment with the latest AI image models.",
+    tags: ["Next.js", "Vercel", "AI", "Image Generation"],
+    imageText: "ImageVivid",
+  },
+  {
     title: "Pypestream Analytics",
     url: "https://pypestream.com",
     img: pypeAnalyticsImg,
@@ -65,22 +90,6 @@ const projectsData = [
     description: "Led the refactor and reskin for an updated conversational UI, delivering real-time engagement while maintaining journey context.",
     tags: ["React", "Redux", "styled-components", "Websockets", "Storybook", "WCAG"],
     imageText: "Pype UI",
-  },
-  {
-    title: "ImageVivid",
-    url: "https://image-vivid.vercel.app",
-    img: imageVividImg,
-    description: "A web application to generate vivid images from AI prompts, built to experiment with the latest AI image models.",
-    tags: ["Next.js", "Vercel", "AI", "Image Generation"],
-    imageText: "ImageVivid",
-  },
-  {
-    title: "AI Voice Chat",
-    url: "https://energent-voice-chat.vercel.app",
-    img: voiceChatImg,
-    description: "A proof-of-concept for real-time voice conversations with AI models like OpenAI and Gemini.",
-    tags: ["Next.js", "Vercel", "AI", "OpenAI", "Gemini", "Voice"],
-    imageText: "Voice Chat",
   },
   {
     title: "GreenOrbit Intranet",
