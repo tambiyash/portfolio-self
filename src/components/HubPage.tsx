@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { IconUser, IconCode, IconLayers, IconMail, IconStar } from './icons';
+import { IconUser, IconCode, IconLayers, IconMail, IconStar, IconPricing, IconTerms, IconSupport, IconRefund } from './icons';
 import AnimatedText from './AnimatedText';
 import { useSound } from '../hooks/useSound';
 import clickSound from '../assets/click.mp3';
@@ -15,7 +15,11 @@ const navNodes = [
   { id: 'skills', title: 'Skillset Core', description: 'Abilities & technologies', icon: <IconCode /> },
   { id: 'projects', title: 'Project Archives', description: 'Showcase of my work', icon: <IconLayers /> },
   { id: 'accolades', title: 'Accolades', description: 'Testimonials & praise', icon: <IconStar /> },
+  { id: 'pricing', title: 'Services & Pricing', description: 'Hire me — code review & dev', icon: <IconPricing /> },
   { id: 'contact', title: 'Connection Port', description: 'Get in touch with me', icon: <IconMail /> },
+  { id: 'support', title: 'Support', description: 'Help, FAQs & contact channels', icon: <IconSupport /> },
+  { id: 'terms', title: 'Terms & Conditions', description: 'Legal & engagement policies', icon: <IconTerms /> },
+  { id: 'refund', title: 'Cancellation & Refunds', description: 'Refund & cancellation policy', icon: <IconRefund /> },
 ];
 
 const containerVariants = {

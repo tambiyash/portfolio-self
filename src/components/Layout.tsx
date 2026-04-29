@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { IconUser, IconCode, IconLayers, IconMail, IconBack, IconStar, IconMenu } from './icons';
+import { IconUser, IconCode, IconLayers, IconMail, IconBack, IconStar, IconMenu, IconPricing, IconTerms, IconSupport, IconRefund } from './icons';
 import { useSound } from '../hooks/useSound';
 import clickSound from '../assets/click.mp3';
 
@@ -16,7 +16,11 @@ const navItems = [
   { id: 'skills', title: 'Skills', icon: <IconCode /> },
   { id: 'projects', title: 'Projects', icon: <IconLayers /> },
   { id: 'accolades', title: 'Accolades', icon: <IconStar /> },
+  { id: 'pricing', title: 'Pricing', icon: <IconPricing /> },
   { id: 'contact', title: 'Contact', icon: <IconMail /> },
+  { id: 'support', title: 'Support', icon: <IconSupport /> },
+  { id: 'terms', title: 'Terms', icon: <IconTerms /> },
+  { id: 'refund', title: 'Refund Policy', icon: <IconRefund /> },
 ];
 
 const Layout: React.FC<LayoutProps> = ({ children, currentPage, onNavigate }) => {

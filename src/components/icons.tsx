@@ -19,7 +19,14 @@ import {
     Star,
     Twitter,
     Menu,
-    X
+    X,
+    DollarSign,
+    ScrollText,
+    LifeBuoy,
+    CheckCircle,
+    Zap,
+    ShieldCheck,
+    RotateCcw,
   } from 'lucide-react';
   
   export const IconHome = Home;
@@ -40,6 +47,13 @@ import {
   export const IconChevronRight = ChevronRight;
   export const IconStar = Star;
   export const IconTwitter = Twitter;
-  export const IconMenu = Menu
-  export const IconClose = X
+  export const IconMenu = Menu;
+  export const IconClose = X;
+  export const IconPricing = DollarSign;
+  export const IconTerms = ScrollText;
+  export const IconSupport = LifeBuoy;
+  export const IconCheck = CheckCircle;
+  export const IconZap = Zap;
+  export const IconShield = ShieldCheck;
+  export const IconRefund = RotateCcw;
   

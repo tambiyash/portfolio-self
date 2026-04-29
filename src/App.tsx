@@ -14,14 +14,37 @@ import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import AccoladesSection from './components/AccoladesSection';
+import PricingSection from './components/PricingSection';
+import TermsSection from './components/TermsSection';
+import SupportSection from './components/SupportSection';
+import RefundSection from './components/RefundSection';
 
 // Define Page IDs
-type Page = 'home' | 'hub' | 'about' | 'skills' | 'projects' | 'contact' | 'accolades';
+type Page = 'home' | 'hub' | 'about' | 'skills' | 'projects' | 'contact' | 'accolades' | 'pricing' | 'terms' | 'support' | 'refund';
+
+const VALID_PAGES: Page[] = ['home', 'hub', 'about', 'skills', 'projects', 'contact', 'accolades', 'pricing', 'terms', 'support', 'refund'];
+
+const hashToPage = (): Page => {
+  const hash = window.location.hash.replace(/^#\/?/, '').toLowerCase() as Page;
+  return VALID_PAGES.includes(hash) ? hash : 'home';
+};
+
+const pageToHash = (page: Page) => {
+  if (page === 'home') return '#/';
+  return `#/${page}`;
+};
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [currentPage, setCurrentPage] = useState<Page>(hashToPage);
   const [isSoundEnabled, setIsSoundEnabled] = useState(false);
   const { play: playBackground, pause: pauseBackground } = useSound(backgroundMusic, { loop: true, volume: 0.3 });
+
+  // Sync hash → state (browser back/forward)
+  useEffect(() => {
+    const onHashChange = () => setCurrentPage(hashToPage());
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   useEffect(() => {
     if (currentPage !== 'home' && isSoundEnabled) {
@@ -32,7 +55,8 @@ const App: React.FC = () => {
   }, [currentPage, isSoundEnabled, playBackground, pauseBackground]);
 
   const handleNavigation = (page: Page) => {
-    setCurrentPage(page);
+    window.location.hash = pageToHash(page);
+    // hashchange listener above will call setCurrentPage
   };
 
   const renderContent = () => {
@@ -47,8 +71,15 @@ const App: React.FC = () => {
         return <ContactSection />;
       case 'accolades':
         return <AccoladesSection />;
+      case 'pricing':
+        return <PricingSection />;
+      case 'terms':
+        return <TermsSection />;
+      case 'support':
+        return <SupportSection />;
+      case 'refund':
+        return <RefundSection />;
       default:
-        // This case should ideally not be reached if inside the layout
         return <AboutSection />;
     }
   };
@@ -68,7 +99,7 @@ const App: React.FC = () => {
           <HubPage key="hub" onNavigate={(pageId) => handleNavigation(pageId as Page)} />
         )}
 
-        {['about', 'skills', 'projects', 'accolades', 'contact'].includes(currentPage) && (
+        {['about', 'skills', 'projects', 'accolades', 'contact', 'pricing', 'terms', 'support', 'refund'].includes(currentPage) && (
            <Layout key="content-layout" currentPage={currentPage} onNavigate={(pageId) => handleNavigation(pageId as Page)}>
             <AnimatePresence mode='wait'>
                 <motion.div key={currentPage}>
